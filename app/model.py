@@ -192,10 +192,10 @@ class InvoiceFV(FPDF):
         # Czcionka: Arial italic 8
         self.set_font('Arial', '', 6)
         # Treść stopki
-        self.cell(0, 5, 'MEDIKAP Maria Kapa ', 0, 2, 'C')
+        self.cell(0, 5, 'MEDIKAP Maria K ', 0, 2, 'C')
         self.cell(0, 5, 'Plac Grunwaldzki 15B, 33-240 Żabno ', 0, 2, 'C')
-        self.cell(0, 5, 'e-mail: gabinet.medikap@gmail.com tel: 539 993 332', 0, 2, 'C')
-        self.cell(0, 5, 'NIP: 9930212793 REGON: 852441210', 0, 0, 'C')
+        self.cell(0, 5, 'e-mail: gabinet.medikap@gmail.com tel: 539 111 111', 0, 2, 'C')
+        self.cell(0, 5, 'NIP: 99 REGON: 85', 0, 0, 'C')
 
     def InvoiceTitle(self, invoiceNum):
         self.set_font('ArialBold','', 20)
@@ -211,7 +211,7 @@ class InvoiceFV(FPDF):
         self.ln(5)
         self.set_font('Arial', '', 11)
 
-        self.cell(80, 5, 'MEDIKAP Maria Kapa', 0, 0, '')
+        self.cell(80, 5, 'MEDIKAP Maria K', 0, 0, '')
         self.cell(35, 15, '', '', 0, '')
         if len(self.companyName) > 30:
             self.set_font('Arial', '', 9)
@@ -224,11 +224,11 @@ class InvoiceFV(FPDF):
         self.cell(35, 15, '', '', 0, '')
         self.cell(80, 5, '{0}'.format(self.companyAdress1), 0, 2, '')
         self.ln(1)
-        self.cell(80, 5, 'NIP: 9930212793', 0, 0, '')
+        self.cell(80, 5, 'NIP: 99', 0, 0, '')
         self.cell(35, 15, '', '', 0, '')
         self.cell(80, 5, '{0}'.format(self.companyAdress2), 0, 2, '')
         self.ln(1)
-        self.cell(80, 5, 'REGON: 852441210', 0, 0, '')
+        self.cell(80, 5, 'REGON: 85', 0, 0, '')
         self.cell(35, 15, '', '', 0, '')
         self.cell(80, 5, 'NIP: {0}'.format(self.companyNIP), 0, 2, '')
         self.ln(1)
@@ -236,7 +236,7 @@ class InvoiceFV(FPDF):
         self.cell(35, 15, '', '', 0, '')
         self.cell(80, 5, 'Forma płatności: {0}'.format(self.paymentMethod), 0, 2, '')
         self.ln(1)
-        self.cell(80, 5, 'Nr konta: 84 1050 1562 1000 0097 1773 0833', 0, 2, '')
+        self.cell(80, 5, 'Nr konta: 84 ', 0, 2, '')
         self.ln(15)
 
         # Tabelka tytuły
